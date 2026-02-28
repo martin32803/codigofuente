@@ -1,4 +1,14 @@
 import qrcode
+from faker import Faker
+
+fake = Faker()
+
+for _ in range(10):
+    name = fake.name()
+    img = qrcode.make(name)
+    img.save(name + ".png")
+    print(f"QR code for {name} generated and saved as {name}.png")
+
 qr = qrcode.QRCode(
     version=1,
     error_correction=qrcode.constants.ERROR_CORRECT_L,
