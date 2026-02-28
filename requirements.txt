@@ -1,0 +1,5 @@
+colorama==0.4.6
+Faker==40.5.1
+pillow==12.1.1
+qrcode==8.2
+tzdata==2025.3
